@@ -241,8 +241,6 @@ main {
 .game-card:nth-child(10) { animation-delay: 0.45s; }
 .game-card:nth-child(11) { animation-delay: 0.50s; }
 .game-card:nth-child(12) { animation-delay: 0.55s; }
-.game-card:nth-child(13) { animation-delay: 0.60s; }
-.game-card:nth-child(14) { animation-delay: 0.65s; }
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
@@ -287,7 +285,6 @@ main {
 .thumb-subway     { background: linear-gradient(135deg, #1a0a1a, #2e182e, #0e040e); }
 .thumb-taptap     { background: linear-gradient(135deg, #001a1a, #00302e, #000e0e); }
 .thumb-tetris     { background: linear-gradient(135deg, #0a001a, #14002e, #060010); }
-.thumb-brawl      { background: linear-gradient(135deg, #0d0a1a, #1a1030, #0a0814); }
 
 .game-wordmark {
   font-size: 36px;
@@ -314,7 +311,6 @@ main {
 .thumb-subway .game-wordmark span     { color: var(--pink); }
 .thumb-taptap .game-wordmark span     { color: var(--teal); }
 .thumb-tetris .game-wordmark span     { color: var(--purple); }
-.thumb-brawl .game-wordmark span      { color: #facc15; }
 
 .thumb-drive .road-line {
   position: absolute; bottom: 0; left: 0; right: 0;
@@ -336,10 +332,6 @@ main {
   position: absolute; bottom: 0; left: 0; right: 0;
   height: 3px; background: var(--blue);
   box-shadow: 0 0 12px rgba(56,189,248,0.6);
-}
-
-.thumb-brawl .brawl-stars-bg {
-  position: absolute; inset: 0; overflow: hidden;
 }
 
 .card-body { padding: 18px 20px 20px; }
@@ -676,22 +668,6 @@ footer {
       </div>
     </div>
 
-    <!-- Brawl Stars -->
-    <div class="game-card">
-      <div class="card-glow"></div>
-      <div class="card-thumb thumb-brawl">
-        <div class="brawl-stars-bg" id="brawl-stars"></div>
-        <div class="game-wordmark">BRAWL<br><span>STARS</span></div>
-      </div>
-      <div class="card-body">
-        <div class="card-tag">ACTION · MULTIPLAYER</div>
-        <div class="card-title">BRAWL STARS</div>
-        <div class="card-desc">Pick your brawler and fight. Team up or go solo across wild game modes and arenas.</div>
-        <div class="card-meta"><span class="badge gold">⭐ POPULAR</span><span class="badge orange">🔫 ACTION</span></div>
-        <a class="play-btn" href="brawlstars.html">PLAY NOW <span class="arrow">→</span></a>
-      </div>
-    </div>
-
   </div>
 </main>
 
@@ -723,31 +699,7 @@ function checkCode() {
     setTimeout(() => input.classList.remove('error'), 400);
   }
 }
-
-// Brawl Stars twinkling stars background
-const container = document.getElementById('brawl-stars');
-for (let i = 0; i < 40; i++) {
-  const s = document.createElement('div');
-  s.style.cssText = `
-    position: absolute;
-    width: 2px; height: 2px;
-    background: #fff;
-    border-radius: 50%;
-    left: ${Math.random() * 100}%;
-    top: ${Math.random() * 100}%;
-    opacity: 0;
-    animation: brawlTwinkle ${1.5 + Math.random() * 3}s ease-in-out ${Math.random() * 3}s infinite;
-  `;
-  container.appendChild(s);
-}
 </script>
-
-<style>
-@keyframes brawlTwinkle {
-  0%, 100% { opacity: 0; }
-  50% { opacity: ${0.3 + Math.random() * 0.7}; }
-}
-</style>
 
 </body>
 </html>
