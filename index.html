@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ALL GAMES</title>
+<title>ALL LESSONS</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&display=swap');
 
@@ -215,13 +215,13 @@ main {
   background: var(--border);
 }
 
-.games-grid {
+.lessons-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
 }
 
-.game-card {
+.lesson-card {
   background: var(--card);
   border: 1px solid var(--border);
   position: relative;
@@ -230,29 +230,29 @@ main {
   animation: fadeUp 0.5s both;
 }
 
-.game-card:nth-child(2)  { animation-delay: 0.05s; }
-.game-card:nth-child(3)  { animation-delay: 0.10s; }
-.game-card:nth-child(4)  { animation-delay: 0.15s; }
-.game-card:nth-child(5)  { animation-delay: 0.20s; }
-.game-card:nth-child(6)  { animation-delay: 0.25s; }
-.game-card:nth-child(7)  { animation-delay: 0.30s; }
-.game-card:nth-child(8)  { animation-delay: 0.35s; }
-.game-card:nth-child(9)  { animation-delay: 0.40s; }
-.game-card:nth-child(10) { animation-delay: 0.45s; }
-.game-card:nth-child(11) { animation-delay: 0.50s; }
-.game-card:nth-child(12) { animation-delay: 0.55s; }
+.lesson-card:nth-child(2)  { animation-delay: 0.05s; }
+.lesson-card:nth-child(3)  { animation-delay: 0.10s; }
+.lesson-card:nth-child(4)  { animation-delay: 0.15s; }
+.lesson-card:nth-child(5)  { animation-delay: 0.20s; }
+.lesson-card:nth-child(6)  { animation-delay: 0.25s; }
+.lesson-card:nth-child(7)  { animation-delay: 0.30s; }
+.lesson-card:nth-child(8)  { animation-delay: 0.35s; }
+.lesson-card:nth-child(9)  { animation-delay: 0.40s; }
+.lesson-card:nth-child(10) { animation-delay: 0.45s; }
+.lesson-card:nth-child(11) { animation-delay: 0.50s; }
+.lesson-card:nth-child(12) { animation-delay: 0.55s; }
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.game-card:hover {
+.lesson-card:hover {
   transform: translateY(-4px);
   border-color: var(--accent);
 }
 
-.game-card:hover .card-glow { opacity: 1; }
+.lesson-card:hover .card-glow { opacity: 1; }
 
 .card-glow {
   position: absolute;
@@ -286,7 +286,7 @@ main {
 .thumb-taptap     { background: linear-gradient(135deg, #001a1a, #00302e, #000e0e); }
 .thumb-tetris     { background: linear-gradient(135deg, #0a001a, #14002e, #060010); }
 
-.game-wordmark {
+.card-wordmark {
   font-size: 36px;
   font-weight: 800;
   letter-spacing: -1px;
@@ -298,19 +298,19 @@ main {
   white-space: nowrap;
 }
 
-.thumb-drive .game-wordmark span      { color: var(--accent2); }
-.thumb-football .game-wordmark span   { color: var(--accent); }
-.thumb-slope .game-wordmark span      { color: var(--blue); }
-.thumb-eggy .game-wordmark span       { color: var(--pink); }
-.thumb-escape .game-wordmark span     { color: var(--red); }
-.thumb-cookie .game-wordmark span     { color: var(--accent); }
-.thumb-flappy .game-wordmark span     { color: var(--green); }
-.thumb-geometry .game-wordmark span   { color: var(--purple); }
-.thumb-holeio .game-wordmark span     { color: var(--teal); }
-.thumb-stickman .game-wordmark span   { color: var(--blue); }
-.thumb-subway .game-wordmark span     { color: var(--pink); }
-.thumb-taptap .game-wordmark span     { color: var(--teal); }
-.thumb-tetris .game-wordmark span     { color: var(--purple); }
+.thumb-drive .card-wordmark span      { color: var(--accent2); }
+.thumb-football .card-wordmark span   { color: var(--accent); }
+.thumb-slope .card-wordmark span      { color: var(--blue); }
+.thumb-eggy .card-wordmark span       { color: var(--pink); }
+.thumb-escape .card-wordmark span     { color: var(--red); }
+.thumb-cookie .card-wordmark span     { color: var(--accent); }
+.thumb-flappy .card-wordmark span     { color: var(--green); }
+.thumb-geometry .card-wordmark span   { color: var(--purple); }
+.thumb-holeio .card-wordmark span     { color: var(--teal); }
+.thumb-stickman .card-wordmark span   { color: var(--blue); }
+.thumb-subway .card-wordmark span     { color: var(--pink); }
+.thumb-taptap .card-wordmark span     { color: var(--teal); }
+.thumb-tetris .card-wordmark span     { color: var(--purple); }
 
 .thumb-drive .road-line {
   position: absolute; bottom: 0; left: 0; right: 0;
@@ -436,7 +436,7 @@ footer {
 @media (max-width: 600px) {
   header { padding: 40px 20px 30px; }
   main { padding: 40px 16px 60px; }
-  .games-grid { grid-template-columns: 1fr; }
+  .lessons-grid { grid-template-columns: 1fr; }
   footer { padding: 20px; justify-content: center; text-align: center; }
   .passcode-box { width: 90%; padding: 28px 24px; }
 }
@@ -460,20 +460,20 @@ footer {
 <div id="main-site">
 
 <header>
-  <div class="site-label">GAME PORTAL · EST. 2025</div>
-  <h1 class="site-title">ALL <span>GAMES</span></h1>
-  <p class="site-subtitle">PICK A GAME · START PLAYING</p>
+  <div class="site-label">LESSON PORTAL · EST. 2025</div>
+  <h1 class="site-title">ALL <span>LESSONS</span></h1>
+  <p class="site-subtitle">PICK A LESSON · START PLAYING</p>
 </header>
 
 <main>
-  <div class="section-label">FEATURED GAMES</div>
-  <div class="games-grid">
+  <div class="section-label">FEATURED LESSONS</div>
+  <div class="lessons-grid">
 
     <!-- Drive Mad -->
-    <div class="game-card">
+    <div class="lesson-card">
       <div class="card-glow"></div>
       <div class="card-thumb thumb-drive">
-        <div class="game-wordmark">DRIVE<br><span>MAD</span></div>
+        <div class="card-wordmark">DRIVE<br><span>MAD</span></div>
         <div class="road-line"></div>
       </div>
       <div class="card-body">
@@ -486,27 +486,27 @@ footer {
     </div>
 
     <!-- Retro Bowl -->
-    <div class="game-card">
+    <div class="lesson-card">
       <div class="card-glow"></div>
       <div class="card-thumb thumb-football">
         <div class="field-lines"></div>
-        <div class="game-wordmark">RETRO<br><span>BOWL</span></div>
+        <div class="card-wordmark">RETRO<br><span>BOWL</span></div>
       </div>
       <div class="card-body">
         <div class="card-tag">SPORTS · FOOTBALL</div>
         <div class="card-title">RETRO BOWL</div>
-        <div class="card-desc">Pick your team, call plays, and drive down the field. Real game logic.</div>
+        <div class="card-desc">Pick your team, call plays, and drive down the field. Real lesson logic.</div>
         <div class="card-meta"><span class="badge new">★ NEW</span><span class="badge">RETRO</span></div>
         <a class="play-btn" href="football.html">PLAY NOW <span class="arrow">→</span></a>
       </div>
     </div>
 
     <!-- Slope -->
-    <div class="game-card">
+    <div class="lesson-card">
       <div class="card-glow"></div>
       <div class="card-thumb thumb-slope">
         <div class="slope-lines"></div>
-        <div class="game-wordmark"><span>SLOPE</span></div>
+        <div class="card-wordmark"><span>SLOPE</span></div>
         <div class="slope-line"></div>
       </div>
       <div class="card-body">
@@ -519,10 +519,10 @@ footer {
     </div>
 
     <!-- Eggy Car -->
-    <div class="game-card">
+    <div class="lesson-card">
       <div class="card-glow"></div>
       <div class="card-thumb thumb-eggy">
-        <div class="game-wordmark">EGGY<br><span>CAR</span></div>
+        <div class="card-wordmark">EGGY<br><span>CAR</span></div>
       </div>
       <div class="card-body">
         <div class="card-tag">PHYSICS · CASUAL</div>
@@ -534,10 +534,10 @@ footer {
     </div>
 
     <!-- Escape Road -->
-    <div class="game-card">
+    <div class="lesson-card">
       <div class="card-glow"></div>
       <div class="card-thumb thumb-escape">
-        <div class="game-wordmark">ESCAPE<br><span>ROAD</span></div>
+        <div class="card-wordmark">ESCAPE<br><span>ROAD</span></div>
       </div>
       <div class="card-body">
         <div class="card-tag">ACTION · DRIVING</div>
@@ -549,10 +549,10 @@ footer {
     </div>
 
     <!-- Cookie Clicker -->
-    <div class="game-card">
+    <div class="lesson-card">
       <div class="card-glow"></div>
       <div class="card-thumb thumb-cookie">
-        <div class="game-wordmark">COOKIE<br><span>CLICKER</span></div>
+        <div class="card-wordmark">COOKIE<br><span>CLICKER</span></div>
       </div>
       <div class="card-body">
         <div class="card-tag">IDLE · CLICKER</div>
@@ -564,10 +564,10 @@ footer {
     </div>
 
     <!-- Flappy Bird -->
-    <div class="game-card">
+    <div class="lesson-card">
       <div class="card-glow"></div>
       <div class="card-thumb thumb-flappy">
-        <div class="game-wordmark">FLAPPY<br><span>BIRD</span></div>
+        <div class="card-wordmark">FLAPPY<br><span>BIRD</span></div>
       </div>
       <div class="card-body">
         <div class="card-tag">ARCADE · TAP</div>
@@ -579,10 +579,10 @@ footer {
     </div>
 
     <!-- Geometry Dash -->
-    <div class="game-card">
+    <div class="lesson-card">
       <div class="card-glow"></div>
       <div class="card-thumb thumb-geometry">
-        <div class="game-wordmark">GEO<br><span>DASH</span></div>
+        <div class="card-wordmark">GEO<br><span>DASH</span></div>
       </div>
       <div class="card-body">
         <div class="card-tag">RHYTHM · PLATFORMER</div>
@@ -594,25 +594,25 @@ footer {
     </div>
 
     <!-- Hole.io -->
-    <div class="game-card">
+    <div class="lesson-card">
       <div class="card-glow"></div>
       <div class="card-thumb thumb-holeio">
-        <div class="game-wordmark">HOLE<br><span>.IO</span></div>
+        <div class="card-wordmark">HOLE<br><span>.IO</span></div>
       </div>
       <div class="card-body">
         <div class="card-tag">IO · CASUAL</div>
         <div class="card-title">HOLE.IO</div>
         <div class="card-desc">Control a black hole and swallow everything in sight. Grow bigger, dominate the city.</div>
-        <div class="card-meta"><span class="badge teal">🕳️ CHILL</span><span class="badge">IO GAME</span></div>
+        <div class="card-meta"><span class="badge teal">🕳️ CHILL</span><span class="badge">IO LESSON</span></div>
         <a class="play-btn" href="holeio.html">PLAY NOW <span class="arrow">→</span></a>
       </div>
     </div>
 
     <!-- Stickman Hook -->
-    <div class="game-card">
+    <div class="lesson-card">
       <div class="card-glow"></div>
       <div class="card-thumb thumb-stickman">
-        <div class="game-wordmark">STICK<br><span>HOOK</span></div>
+        <div class="card-wordmark">STICK<br><span>HOOK</span></div>
       </div>
       <div class="card-body">
         <div class="card-tag">SKILL · SWING</div>
@@ -624,10 +624,10 @@ footer {
     </div>
 
     <!-- Subway Surfers -->
-    <div class="game-card">
+    <div class="lesson-card">
       <div class="card-glow"></div>
       <div class="card-thumb thumb-subway">
-        <div class="game-wordmark">SUBWAY<br><span>SURFERS</span></div>
+        <div class="card-wordmark">SUBWAY<br><span>SURFERS</span></div>
       </div>
       <div class="card-body">
         <div class="card-tag">ENDLESS · RUNNER</div>
@@ -639,10 +639,10 @@ footer {
     </div>
 
     <!-- Tap Tap Shots -->
-    <div class="game-card">
+    <div class="lesson-card">
       <div class="card-glow"></div>
       <div class="card-thumb thumb-taptap">
-        <div class="game-wordmark">TAP TAP<br><span>SHOTS</span></div>
+        <div class="card-wordmark">TAP TAP<br><span>SHOTS</span></div>
       </div>
       <div class="card-body">
         <div class="card-tag">SPORTS · TAP</div>
@@ -654,10 +654,10 @@ footer {
     </div>
 
     <!-- Tetris -->
-    <div class="game-card">
+    <div class="lesson-card">
       <div class="card-glow"></div>
       <div class="card-thumb thumb-tetris">
-        <div class="game-wordmark">TET<br><span>RIS</span></div>
+        <div class="card-wordmark">TET<br><span>RIS</span></div>
       </div>
       <div class="card-body">
         <div class="card-tag">PUZZLE · CLASSIC</div>
@@ -672,7 +672,7 @@ footer {
 </main>
 
 <footer>
-  <div class="footer-brand">ALL GAMES</div>
+  <div class="footer-brand">ALL LESSONS</div>
   <div class="footer-copy">MADE BY ELI · 2025</div>
 </footer>
 
